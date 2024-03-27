@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بحوث الشيخ الجليل واثق الشمري</title>
+</head>
+<body>
+    <header>
+        <img src="صورة1.jpg" alt="صورة 1" onclick="showContent('content1.html')">
+        <img src="صورة2.jpg" alt="صورة 2" onclick="showContent('content2.html')">
+        <img src="صورة3.jpg" alt="صورة 3" onclick="showContent('content3.html')">
+        <img src="صورة4.jpg" alt="صورة 4" onclick="showContent('content4.html')">
+        <img src="صورة5.jpg" alt="صورة 5" onclick="showContent('content5.html')">
+        <p>حقوق النشر © ابن علي الاخباري</p>
+    </header>
+
+    <div id="content">
+        <!-- محتوى الصفحة سيظهر هنا -->
+    </div>
+
+    <script>
+        function showContent(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').innerHTML = data;
+                });
+        }
+    </script>
+</body>
+</html>
